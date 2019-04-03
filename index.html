@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 150px auto;
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+
+        ul{
+            padding: 0;
+            list-style: none;
+            width: 100px;
+            height: 100%;
+            float: left;
+            position: relative;
+            transform-style: preserve-3d;
+            transform-origin: center center -100px;
+            /*overflow: hidden;*/
+
+        }
+        li{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: 500px 200px;
+            background-repeat:no-repeat ;
+        }
+
+        ul li:nth-child(4){
+            top: -200px;
+            transform-origin: bottom;
+            transform: rotateX(90deg);
+        }
+        ul li:nth-child(3){
+            bottom: -200px;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        ul li:nth-child(2){
+            transform: translateZ(-200px) rotateZ(180deg);
+        }
+
+
+        #one li:nth-child(1){
+            background-image: url("images/dog3.jpg");
+            background-position: 0 0;
+        }
+        #two li:nth-child(1){
+            background-image: url("images/dog3.jpg");
+            background-position: -100px 0;
+        }
+        #three li:nth-child(1){
+            background-image: url("images/dog3.jpg");
+            background-position:-200px 0;
+        }
+        #four li:nth-child(1){
+            background-image: url("images/dog3.jpg");
+            background-position:-300px 0;
+        }
+        #five li:nth-child(1){
+            background-image: url("images/dog3.jpg");
+            background-position:-400px 0;
+        }
+
+
+        #one li:nth-child(4){
+            background: url("images/girl1.jpg") no-repeat 0 0 / 500px 200px;
+        }
+        #two li:nth-child(4){
+            background: url("images/girl1.jpg") no-repeat -100px 0 / 500px 200px;
+        }
+        #three li:nth-child(4){
+            background: url("images/girl1.jpg") no-repeat -200px 0 / 500px 200px;
+        }
+        #four li:nth-child(4){
+            background: url("images/girl1.jpg") no-repeat -300px 0 / 500px 200px;
+        }
+        #five li:nth-child(4){
+            background: url("images/girl1.jpg") no-repeat -400px 0 / 500px 200px;
+        }
+
+
+
+        #one li:nth-child(3){
+            background: url("images/girl2.jpg") no-repeat 0 0 / 500px 200px;
+        }
+        #two li:nth-child(3){
+            background: url("images/girl2.jpg") no-repeat -100px 0 / 500px 200px;
+        }
+        #three li:nth-child(3){
+            background: url("images/girl2.jpg") no-repeat -200px 0 / 500px 200px;
+        }
+        #four li:nth-child(3){
+            background: url("images/girl2.jpg") no-repeat -300px 0 / 500px 200px;
+        }
+        #five li:nth-child(3){
+            background: url("images/girl2.jpg") no-repeat -400px 0 / 500px 200px;
+        }
+
+
+        #one li:nth-child(2){
+            background: url("images/girl3.jpg") no-repeat -400px 0 / 500px 200px;
+        }
+        #two li:nth-child(2){
+            background: url("images/girl3.jpg") no-repeat -300px 0 / 500px 200px;
+        }
+        #three li:nth-child(2){
+            background: url("images/girl3.jpg") no-repeat -200px 0 / 500px 200px;
+        }
+        #four li:nth-child(2){
+            background: url("images/girl3.jpg") no-repeat -100px 0 / 500px 200px;
+        }
+        #five li:nth-child(2){
+            background: url("images/girl3.jpg") no-repeat 0px 0 / 500px 200px;
+        }
+
+
+        /*div:hover #one {*/
+            /*transform-origin: center center -100px;*/
+            /*animation: rotate 1s linear forwards;*/
+        /*}*/
+        /*div:hover #two {*/
+            /*transform-origin: center center -100px;*/
+            /*animation: rotate 1s .3s linear forwards;*/
+        /*}*/
+        /*div:hover #three {*/
+            /*transform-origin: center center -100px;*/
+            /*animation: rotate 1s .6s linear forwards;*/
+        /*}*/
+        /*div:hover #four {*/
+            /*transform-origin: center center -100px;*/
+            /*animation: rotate 1s .9s linear forwards;*/
+        /*}*/
+        /*div:hover #five {*/
+            /*transform-origin: center center -100px;*/
+            /*animation: rotate 1s 1.2s linear forwards;*/
+        /*}*/
+
+        /*#one{*/
+             /*transition: all 1s linear ;*/
+         /*}*/
+        /*#two{*/
+            /*transition: all 1s .3s linear ;*/
+        /*}*/
+        /*#three{*/
+            /*transition: all 1s .6s linear ;*/
+        /*}*/
+        /*#four{*/
+            /*transition: all 1s .9s linear ;*/
+        /*}*/
+        /*#five{*/
+            /*transition: all 1s 1.2s linear ;*/
+        /*}*/
+        /*@keyframes rotate {*/
+            /*from{}*/
+            /*to{*/
+                /*transform: rotateX(-90deg);*/
+            /*}*/
+        /*}*/
+
+
+        input{
+            width: 100px;
+            height: 50px;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul id="one">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul id="two">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul id="three">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul id="four">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul id="five">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+</div>
+
+<input type="button" value="下一页">
+
+
+<script>
+
+    var one = document.getElementById('one');
+    var two = document.getElementById('two');
+    var three = document.getElementById('three');
+    var four = document.getElementById('four');
+    var five = document.getElementById('five');
+    var ulList = document.getElementsByTagName('ul')
+
+    var index = 0
+    document.querySelector('input').onclick = function (  ) {
+
+        // one.style.animation = 'rotate 1s linear forwards'
+        // two.style.animation = 'rotate 1s .3s linear forwards'
+        // three.style.animation = 'rotate 1s .6s linear forwards'
+        // four.style.animation = 'rotate 1s .9s linear forwards'
+        // five.style.animation = 'rotate 1s 1.2s linear forwards'
+        // one.style.transform = 'rotateX(-90deg)'
+
+        index ++;
+
+        for(var i = 0;i<ulList.length;i++){
+
+            ulList[i].style.transition = "all 1s "  + 0.3 * i + "s" + " linear";
+        }
+
+
+        for(var i = 0;i<ulList.length;i++){
+
+
+            ulList[i].style.transform = 'rotateX('+ -90*index + 'deg)';
+
+
+        }
+    }
+</script>
+</body>
+</html>
